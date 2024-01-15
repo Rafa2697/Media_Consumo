@@ -12,7 +12,8 @@ function calcMedia(){
         document.getElementById('result-media').innerHTML = `Prencha os capos para ter a média de consumo`
         document.querySelector('body').style.background = `darkred` 
     }else{
-        document.getElementById('result-media').innerHTML = `${media} Quilômetros por Litro`
+        document.getElementById('result-media').innerHTML = `<span>${media.toFixed(2)}</span> Quilômetros por Litro`
+        document.querySelector('body').style.background = `darkblue` 
     }
 
     
