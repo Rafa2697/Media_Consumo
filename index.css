@@ -5,12 +5,30 @@
 }
 
 body{
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
+
+.icone{
+    display: flex;
+    justify-content: center;
+    animation: move-img 0.7s infinite alternate ease-in-out;
+    position: relative;
+}
+#icon{
+    font-size: 5em;
+    color: cornflowerblue;
+    
+}
+@keyframes move-img {
+    from {left: 0px;}
+    to {left: 5px;}
+    
+}
 main{
     width: 90%;
     border-radius: 10px;
@@ -19,14 +37,13 @@ main{
 main h1{
     font-size: 20px;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 .container-form{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
     flex-direction: column;
 }
 label{
