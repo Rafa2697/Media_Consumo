@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(MidnightBlue,navy, blue);
+}
+
+
+.icone{
+    display: flex;
+    justify-content: center;
+    animation: move-img 0.7s infinite alternate ease-in-out;
+    position: relative;
+}
+#icon{
+    font-size: 5em;
+    color: cornflowerblue;
+    
+}
+@keyframes move-img {
+    from {left: 0px;}
+    to {left: 5px;}
+    
+}
+main{
+    width: 90%;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.358);
+}
+
+ul{
+    padding: 30px;
+    
+}
+li{
+    padding: 10px;
+    font-size: larger;
+}
+p{
+    text-align: center;
+}
+
+
+
+
+
+
