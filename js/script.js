@@ -1,5 +1,5 @@
 function abriPage(a){
-    let localPag = document.querySelector('html')
+    let localPag = document.querySelector('body')
     let pag = new XMLHttpRequest()
 
     pag.onreadystatechange = () => {
