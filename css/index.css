@@ -44,9 +44,12 @@ ul{
 li{
     padding: 10px;
     font-size: larger;
+    color: aliceblue;
+    font-weight: 500;
 }
 p{
     text-align: center;
+    color: aliceblue;
 }
 
 
