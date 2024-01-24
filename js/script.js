@@ -12,7 +12,7 @@
 //     pag.send()
 // }
 
-let pages = ['app1.html', 'app2.html'];
+let pages = ['app2.html', 'app1.html'];
 let currentPage = 0;
 
 document.querySelector('#botao').addEventListener('click', function () { // nesse evento usando fetch o body do app1 toma o lugar do body do index. 
