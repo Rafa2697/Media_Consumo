@@ -10,7 +10,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: linear-gradient(MidnightBlue,navy, blue);
+    /* background-image: linear-gradient(MidnightBlue,navy, blue); */
+    
 }
 
 
