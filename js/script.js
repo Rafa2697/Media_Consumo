@@ -12,6 +12,7 @@
 //     pag.send()
 // }
 
+
 let pages = ['app2.html', 'app1.html'];
 let currentPage = 0;
 
@@ -29,6 +30,10 @@ document.querySelector('#botao').addEventListener('click', function () { // ness
             console.error('erro:', error);
         })
 })
+
+
+
+
 
 // document.querySelector('#botao1').addEventListener('click', function() {
 //     fetch('app2.html')
@@ -63,6 +68,8 @@ function calcGasto() {
 
 }
 
+
+
 function calcMedia() {
     const km = Number(document.getElementById('km').value)
     const litros = Number(document.getElementById('litros').value)
@@ -74,7 +81,23 @@ function calcMedia() {
     } else {
         document.getElementById('result-media').innerHTML = `<span>${media.toFixed(2)}</span> Quilômetros por Litro`
         document.querySelector('body').style.background = `darkblue`
+        
+        
+        teste()
     }
 
+    return media;
+ 
 
 }
+
+function teste(){
+    const km = calcMedia()
+
+    console.log(km)
+}
+
+
+
+//armazena os dados no local storage do navegador. 
+
