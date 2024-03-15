@@ -1,0 +1,3 @@
+
+import calcMedia from "./script";
+
