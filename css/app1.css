@@ -90,6 +90,10 @@ label{
     font-weight: 900;
 }
 
+.result-media{
+    text-align: center;
+}
+
 .result-ult-media{
     font-size: smaller;
     color:whitesmoke;
