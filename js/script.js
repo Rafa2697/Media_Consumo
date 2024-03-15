@@ -67,23 +67,28 @@ function calcGasto() {
     }
 
 }
-
+window.onload = function() {
+    // Verifica se existe média salva no localStorage
+    const mediaSalva = localStorage.getItem('mediaConsumo');
+    if (mediaSalva) {
+        document.getElementById('result-ult-media').innerHTML = `Última média de consumo: ${mediaSalva} Quilômetros por Litro`;
+    }
+}
 function calcMedia() {
     const km = Number(document.getElementById('km').value)
     const litros = Number(document.getElementById('litros').value)
     let media = km / litros;
 
-    // Verifica se existe média salva no localStorage
-    const mediaSalva = localStorage.getItem('mediaConsumo');
-    document.getElementById('result-ult-media').innerHTML = `${mediaSalva}`
 
     if (isNaN(media)) {
-        document.getElementById('result-media').innerHTML = `Prencha os capos para ter a média de consumo`
+        document.getElementById('result-media').innerHTML = `Prencha os campos para ter a média de consumo`
         document.querySelector('body').style.background = `darkred`
     } else {
+        // Salva a média no localStorage
+        localStorage.setItem('mediaConsumo', media.toFixed(2));
         document.getElementById('result-media').innerHTML = `<span>${media.toFixed(2)}</span> Quilômetros por Litro`
         document.querySelector('body').style.background = `darkblue`
     }
-
-
 }
+
+  
