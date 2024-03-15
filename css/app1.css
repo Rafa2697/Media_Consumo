@@ -82,6 +82,7 @@ label{
     justify-content: center;
     font-size: larger;
     padding: 10px;
+    flex-direction: column;
     
 }
 .container-result span{

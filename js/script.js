@@ -63,10 +63,22 @@ function calcGasto() {
 
 }
 
+function displayLastSavedResult() {
+    const mediaSalva = localStorage.getItem('mediaConsumo');
+    if (mediaSalva) {
+      document.getElementById('result-ult-media').innerHTML = `Última média: ${mediaSalva}`;
+    }
+  }
+
+
 function calcMedia() {
     const km = Number(document.getElementById('km').value)
     const litros = Number(document.getElementById('litros').value)
     let media = km / litros;
+
+    // Verifica se existe média salva no localStorage
+    const mediaSalva = localStorage.getItem('mediaConsumo');
+    document.getElementById('result-ult-media').innerHTML = `${mediaSalva}`
 
     if (isNaN(media)) {
         document.getElementById('result-media').innerHTML = `Prencha os capos para ter a média de consumo`
@@ -74,7 +86,30 @@ function calcMedia() {
     } else {
         document.getElementById('result-media').innerHTML = `<span>${media.toFixed(2)}</span> Quilômetros por Litro`
         document.querySelector('body').style.background = `darkblue`
+        salvarMedia();
+
     }
 
 
 }
+
+function salvarMedia() {
+    const media = document.getElementById('result-media').textContent;
+    console.log('Salvando média:', media);
+    localStorage.setItem('mediaConsumo', media);
+}
+window.onload = function () {
+    displayLastSavedResult();
+    calcMedia(); // Perform initial calculation
+  };
+
+document.getElementById('km').addEventListener('change', () => {
+    calcMedia();
+    displayLastSavedResult()
+});
+
+document.getElementById('litros').addEventListener('change', () => {
+    calcMedia();
+    displayLastSavedResult()
+})
+
